@@ -10,7 +10,7 @@ TOP_K = int(os.getenv('TOP_K', 5))
 
 
 # 헬스체크 — Docker / Gateway 용
-@app.route('/health', methods=['GET'])
+@app.route('/internal/health', methods=['GET'])
 def health():
     return jsonify({'status': 'ok', 'model': 'KR-SBERT-V40K-klueNLI-augSTS'}), 200
 
